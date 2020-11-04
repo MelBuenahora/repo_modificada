@@ -1,0 +1,23 @@
+@mixin animations {
+    transform: scale(1.1);
+}
+
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin header {
+    height: 85px;
+    position: sticky;
+    z-index: 1;
+    top: 0 ;
+}
+
+@mixin logo {
+    width: 280px;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+}
+

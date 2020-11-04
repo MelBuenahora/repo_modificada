@@ -1,0 +1,331 @@
+@import 'colors';
+@import 'mixins';
+@import 'fonts';
+
+.header {
+    @include header
+}
+
+.indexMenu {
+    a {
+        color: $color-font-menu;
+        font-family: $fonts-principal;
+        font-size: 28px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline;
+
+        &:hover {
+            text-decoration: underline;
+            color: $hover-color;
+        }
+    }
+
+    display: inline;
+}
+
+.mainMenu {
+    background-color: $background-color-mainmenu;
+    border-bottom: 5px solid #F0E68C;
+    width: auto;
+    display: flex;
+
+}
+
+.menu {
+    background-color: $background-color-mainmenu;
+    @include flexbox;
+    flex-direction: column;
+}
+
+.img {
+    @include logo;
+
+    &:hover {
+        @include animations
+    }
+
+}
+
+.principal {
+    color: $color-font-menu;
+    background-color: $background-color-principal;
+    font-family: $fonts-secundaria;
+    font-size: 50px;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 10px;
+    border-top: 4px ridge #f7cce5;
+    border-bottom: 4px groove #F7CCE5;
+    text-align: center;
+}
+
+.parrafos {
+    font-family: $fonts-secundaria;
+    color: $color-parrafos;
+}
+
+.tt1 {
+    color: $color-titulo-seccion;
+    font-family: $fonts-principal;
+    font-size: 45px;
+    background-color: #d7b0fc;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-top: 3px solid #a366ff;
+    border-bottom: 3px solid #a366ff;
+    text-align: center;
+}
+
+.t2 {
+    color: $color-titulo-seccion;
+    font-family: $fonts-secundaria;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: whitesmoke;
+    padding: 10px 60px 10px 60px;
+    border-top: 3px solid #a366ff;
+    border-bottom: 3px solid #a366ff;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.t3 {
+    color: $color-titulo-seccion;
+    font-family: $fonts-secundaria;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #A366FF;
+    border-top: 3px solid #A366ff;
+    text-align: center;
+    word-spacing: 8px;
+}
+
+.atenti {
+    color: $color-parrafos;
+    font-family: $fonts-secundaria;
+    font-size: 28px;
+    padding: 2px;
+    letter-spacing: 3px;
+    margin-top: 30px 0 30px 0;
+    text-align: center;
+}
+
+.parrafo {
+    color: $color-parrafos;
+    font-family: $fonts-secundaria;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 15px 40px 45px 40px;
+    line-height: 42px;
+}
+
+ul li {
+    color: $color-parrafos;
+    font-family: $fonts-principal;
+    font-size: 28px;
+    list-style-type: square;
+    margin-left: 60px;
+}
+
+ol li {
+    color: $color-parrafos;
+    font-family: $fonts-principal;
+    font-size: 25px;
+    list-style-type: lower-latin;
+    margin-left: 60px;
+}
+
+.tt {
+    color: $color-font-menu;
+    font-family: $fonts-principal;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline double;
+}
+
+td {
+    color: $color-parrafos;
+    font-family: $fonts-principal;
+    font-size: 25px;
+}
+
+.imgAnimada {
+    @include flexbox;
+    height: 280px;
+    width: 350px;
+    background-color: #ffffbf;
+    animation-name: yoga;
+    animation-delay: 20s;
+    animation-duration: 10s;
+}
+
+.animada {
+    @include flexbox;
+    align-items: center;
+
+    &:hover {
+        @include animations;
+    }
+}
+
+@keyframes yoga {
+    from {
+        background-color: #b669be;
+    }
+
+    to {
+        background-color: #dd9551;
+    }
+}
+
+.prog2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.talleres {
+    display: flex;
+    align-items: center;
+}
+
+.prog1a {
+    display: flex;
+    align-items: center;
+}
+
+.formulario {
+    color: #737373;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.select-op {
+    background-color: #6413afaf;
+}
+
+.tabla {
+    display: block;
+    overflow-x: scroll;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.programacion {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.videoAudio,
+.prog1a {
+    @include flexbox;
+    align-items: center;
+}
+
+.extra {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagenesChaman,
+.imagenesReiki,
+.imagenesLecturas,
+.imagenesPendulo {
+    width: 100%;
+    height: 300px;
+    @include flexbox;
+    align-items: center;
+
+    &:hover {
+        @include animations;
+    }
+}
+
+.imgBook {
+    &:hover {
+        @include animations;
+    }
+}
+
+.ftr {
+    background-color: $backgroundcolor-footer;
+    text-align: center;
+    height: 80px;
+    border-top: 3px solid #F0E68C;
+}
+
+.firma {
+    margin-top: 25px;
+}
+
+.faceb {
+    position: fixed;
+    bottom: 190px;
+    right: 0;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+}
+
+.insta {
+    position: fixed;
+    bottom: 120px;
+    right: 0;
+}
+
+/* Make the image fully responsive */
+.carousel-inner img {
+    width: 100%;
+    height: 450px;
+}
+
+/*Mobile Style*/
+@media only screen and (min-width: 400px) {
+
+    .imagenesChaman,
+    .imagenesReiki {
+        width: 25%;
+    }
+
+    .imagenesLecturas,
+    .imagenesPendulo {
+        width: 50%;
+    }
+}
+
+/*Tablet Style*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+    .imagenesChaman,
+    .imagenesReiki,
+    .imagenesLecturas,
+    .imagenesPendulo {
+        width: 50%;
+    }
+}
+
+/*Desktop Style*/
+@media only screen and (min-width: 961px) {
+
+    .extra {
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+body {
+    background-color: #fffff2 !important;
+}
